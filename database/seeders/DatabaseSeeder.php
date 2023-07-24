@@ -84,8 +84,8 @@ class DatabaseSeeder extends Seeder
         ]);
 
         YtLink::create([
-            'title' => 'Pencegahan Hidrosefalus',
-            'embed_link' => 'https://www.youtube.com/embed/VGtIP0iQmcY',
+            'title' => 'GIT & GITHUB',
+            'embed_link' => 'https://www.youtube.com/embed/CYlu6yoUsLI',
         ]);
     }
 }

@@ -5,8 +5,8 @@
 <div class="container mt-4">
     <div class="row text-center">
         <div class="col-12">
-            <h2 class="section-title">RS Graha Hermine</h2>
-            <h3 class="section-sub-title">Layanan Poliklinik</h3>
+            <h2 class="section-title">IQ PRIMATECH</h2>
+            <h3 class="section-sub-title">UI / UX</h3>
         </div>
     </div>
     <div class="row">

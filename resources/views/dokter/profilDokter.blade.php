@@ -50,8 +50,8 @@ $bgImage3 = asset('Template/images/slider-layanan/bg3.jpg');
 <div class="container mt-4">
     <div class="row text-center">
         <div class="col-12">
-            <h2 class="section-title">RS Graha Hermine</h2>
-            <h3 class="section-sub-title">Dokter Kami</h3>
+            <h2 class="section-title">IQ PRIMATECH</h2>
+            <h3 class="section-sub-title">MEMBERS</h3>
         </div>
     </div>
 

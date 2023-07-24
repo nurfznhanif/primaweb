@@ -9,7 +9,7 @@
                 <div class="row">
                     <div class="col">
                         <h5 class="">VISI</h5>
-                        <p>Menjadi Rumah Sakit pilihan utama masyarakat Batam tahun 2022</p>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce nec nibh vel odio luctus sagittis eget vel justo. Nulla facilisi.</p>
                     </div>
                 </div>
                 <br>
@@ -17,11 +17,11 @@
                     <div class="col">
                         <h5 class="">MISI</h5>
                         <ul>
-                            <li>Memberikan pelayanan kesehatan yang cepat, tepat dan berkualitas.</li>
-                            <li>Mengutamakan kenyamanan dan keselamatan pasien.</li>
-                            <li>Memberikan pelayanan kesehatan yang terjangkau dan kesejahteraan oleh seluruh lapisan masyarakat.</li>
-                            <li>Meningkatkan pengetahuan, keterampilan karyawan, sehingga mampu melaksanakan pelayanan yang profesional.</li>
-                            <li>Meningkatkan kualitas alat kedokteran yang dapat memberikan nilai lebih bagi pelayanan kesehatan.</li>
+                            <li>Etiam laoreet eros et justo sagittis, eget fermentum dolor lobortis. </li>
+                            <li>Etiam laoreet eros et justo sagittis, eget fermentum dolor lobortis. </li>
+                            <li>MEtiam laoreet eros et justo sagittis, eget fermentum dolor lobortis. </li>
+                            <li>Etiam laoreet eros et justo sagittis, eget fermentum dolor lobortis. </li>
+                            <li>Etiam laoreet eros et justo sagittis, eget fermentum dolor lobortis. </li>
                         </ul>
                     </div>
                 </div>
@@ -30,20 +30,20 @@
 
             <div class="col-lg-6 mt-5 mt-lg-0">
 
-                <iframe width="560" height="315" src="https://www.youtube.com/embed/yfwblKqp7jg" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+            <iframe width="560" height="315" src="https://www.youtube.com/embed/SSIt7b4hCeo" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
             </div>
 
             <div class="col mt-4">
                 <h3 class="column-title">Sejarah Singkat</h3>
                 <div class="row">
                     <div class="col">
-                        <p>Rumah Sakit Graha Hermine adalah salah satu rumah sakit swasta di Batam yang berdiri pada tanggal 3 Desember 2009. Pada awalnya Rumah Sakit Graha Hermine hanya merupakan sebuah Rumah Sakit Bersalin yang dibangun oleh 5 orang dokter senior dengan tujuan memberikan pelayanan kesehatan untuk ibu dan anak. Dari Rumah Sakit Bersalin ini berkembang menjadi sebuah Rumah Sakit Umum dengan tipe kelas C.</p>
+                        <p>Donec non lobortis turpis. Etiam laoreet eros et justo sagittis, eget fermentum dolor lobortis. Proin dapibus enim eu tellus aliquam fermentum. Maecenas condimentum, purus quis dictum posuere, mi enim venenatis felis, eu semper metus orci vel nisl. Pellentesque ut metus eu purus feugiat gravida. Cras a aliquam purus, eu egestas tellus. Praesent convallis magna quis felis dictum posuere. </p>
                         <p>
-                            Dengan semangat yang tinggi untuk terus mengabdi kepada negara dan masyarakat tanpa pamrih dan mencari keuntungan, para pendiri terus membangun dan mengembangkan Rumah Sakit Graha Hermine baik dari segi fisik, fasilitas alat kesehatan dan kelengkapan maupun sumber daya manusianya. Saat ini, Rumah Sakit Graha Hermine telah menjadi rumah sakit yang sedang berkembang di Kota Batam karena sudah memiliki 141 tempat tidur dengan bangunan fisik minimalis dan mempunyai peralatan kesehatan yang memadai yang dibeli sendiri serta didukung oleh staf medik dan karyawan lainnya.
+                        Quisque quis magna ac nisi facilisis finibus. Donec consectetur ligula eu quam accumsan lobortis. Sed interdum, elit in tempus porttitor, sapien dui ullamcorper risus, a bibendum libero orci ut ante. Nam sit amet aliquam eros. Phasellus aliquet felis nec ultrices malesuada.
                         </p>
 
                         <p>
-                            Selanjutnya pada tahun 2019 Rumah Sakit Graha Hermine Telah terakreditasi Madya dengan 16 Standar pelayanan dengan Keputusan komisi Akreditasi Rumah Sakit (KARS) No: KARS-SERT/593/V/2019 tanggal 20 Mei 2019.
+                        Nam congue elit a dolor eleifend, ut sagittis nulla malesuada. Pellentesque ut nisi sed ligula tincidunt dictum. Integer et velit ut lectus vestibulum faucibus vel ac eros. Nam bibendum, odio a imperdiet tincidunt, risus neque scelerisque ipsum, vel maximus tortor felis at est. Integer at facilisis tellus. Proin dapibus luctus arcu nec iaculis. Suspendisse potenti. Vivamus finibus vestibulum libero, id bibendum risus aliquam sit amet. In nec lacinia elit. Integer tristique ullamcorper felis a viverra. Sed nec fringilla libero. Proin sed ex et odio tincidunt interdum. Vivamus pellentesque eleifend ullamcorper. Sed maximus a mauris in tincidunt. Fusce luctus enim vel libero bibendum, vel facilisis urna laoreet.
                         </p>
                     </div>
                 </div>

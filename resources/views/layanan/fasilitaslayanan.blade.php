@@ -6,12 +6,12 @@
 <div class="container mt-4">
     <div class="row text-center">
         <div class="col-12">
-            <h2 class="section-title">RS Graha Hermine</h2>
-            <h3 class="section-sub-title">Fasilitas Layanan Kami</h3>
+            <h2 class="section-title">IQ PRIMATECH</h2>
+            <h3 class="section-sub-title">PROJECT</h3>
         </div>
     </div>
     <div class="col-md-6">
-        <h4 class="widget-title">Filter Fasilitas Berdasarkan</h4>
+        <h4 class="widget-title">Filter Project</h4>
         <form action="/services/fasilitas-layanan">
             <div class="input-group mb-3">
                 <select name="search" class="form-control">
