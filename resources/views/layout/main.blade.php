@@ -41,52 +41,52 @@
     <!-- wa floating btn-->
     <link rel="stylesheet" href="{{asset('Template')}}/css/wabtn.css">
 
-
 </head>
 
 <body>
     <div class="body-inner">
         <!-- Header start -->
         <header id="header" class="header-two">
-            <div class="site-navigation ">
+            <div class="site-navigation">
                 <div class="row mr-4 ml-4">
 
                     <div class="col-lg-12">
-                        <nav class="navbar navbar-expand-lg navbar-light pr-5 pl-5 d-flex justify-content-between">
+                        <nav class="navbar navbar-fixed-top navbar-expand-lg navbar-light p-0">
 
                             <div class="logo">
                                 <a class="d-block" href="/">
-                                    <img loading="lazy" src="{{ asset('images')}}/PRIMATECH/IMG_6716.png" alt="Constra">
+                                    <img loading="lazy" src="assets/img/primatech.PNG"
+                                        alt="Constra">
                                 </a>
                             </div><!-- logo end -->
 
                             <button class="navbar-toggler" type="button" data-toggle="collapse"
                                 data-target=".navbar-collapse" aria-controls="navbar-collapse" aria-expanded="false"
-                                aria-label="Toggle navigation">
+                                aria-label="Toggle navigation" style="border-radius: 3px">
                                 <span class="navbar-toggler-icon"></span>
                             </button>
 
-                            <div id="navbar-collapse" class="">
+                            <div id="navbar-collapse" class="collapse navbar-collapse">
                                 <ul class="nav navbar-nav ml-auto align-items-center">
 
                                     <li class="nav-item"><a class="nav-link" href="/">Beranda</a></li>
 
-                                    <li class="nav-item"><a class="nav-link" href="/tentang">Tentang kami</a></li>
+                                    <li class="nav-item"><a class="nav-link nb" href="/tentang">Tentang kami</a></li>
 
-
-                                    <li class="nav-item"><a class="nav-link" href="/artikel">Artikel</a></li>
+                                    <li class="nav-item"><a class="nav-link nb" href="/artikel">Artikel</a></li>
 
                                     <li class="nav-item dropdown">
-                                        <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown">Informasi <i
-                                                class="fa fa-angle-down"></i></a>
+                                        <a href="#" class="nav-link dropdown-toggle nb"
+                                            data-toggle="dropdown">Informasi
+                                            <i class="fa fa-angle-down"></i></a>
                                         <ul class="dropdown-menu" role="menu">
-                                            <li><a href="/member/profil">Member</a></li>
-                                            <li><a href="/galeri">Galeri</a></li>
-                                            <li><a href="/project">Project</a></li>
-                                            <li><a href="/partnership">Our Partners</a></li>
+                                            <li><a class="dr" href="/member/profil">Members</a></li>
+                                            <li><a class="dr" href="/galeri">Galeri</a></li>
+                                            <li><a class="dr" href="/project">Project</a></li>
+                                            <li><a class="dr" href="/partnership">Our Partners</a></li>
                                         </ul>
                                     </li>
-                                    <li class="nav-item"><a class="nav-link" href="/e-library">E-Library</a></li>
+                                    <li class="nav-item"><a class="nav-link nb" href="/e-library">E-Library</a></li>
                                 </ul>
                             </div>
                         </nav>
