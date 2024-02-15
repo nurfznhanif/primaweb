@@ -18,10 +18,11 @@
 
     <!-- Favicon
 ================================================== -->
-    <link rel="icon" type="image/png" href="{{asset('Template')}}/images/favicon.png">
 
     <!-- CSS
 ================================================== -->
+    <!-- Beranda -->
+    <link href="{{ asset('beranda') }}" rel="stylesheet">
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
     <!-- Bootstrap -->
     <link rel="stylesheet" href="{{asset('Template')}}/plugins/bootstrap/bootstrap.min.css">
@@ -36,6 +37,7 @@
     <link rel="stylesheet" href="{{asset('Template')}}/plugins/colorbox/colorbox.css">
     <!-- Template styles-->
     <link rel="stylesheet" href="{{asset('Template')}}/css/style.css">
+    <link rel="stylesheet" href="{{asset('Template')}}/css/beranda.css">
     <!-- wa floating btn-->
     <link rel="stylesheet" href="{{asset('Template')}}/css/wabtn.css">
 
@@ -46,23 +48,25 @@
     <div class="body-inner">
         <!-- Header start -->
         <header id="header" class="header-two">
-            <div class="site-navigation">
+            <div class="site-navigation ">
                 <div class="row mr-4 ml-4">
 
                     <div class="col-lg-12">
-                        <nav class="navbar navbar-expand-lg navbar-light p-0">
+                        <nav class="navbar navbar-expand-lg navbar-light pr-5 pl-5 d-flex justify-content-between">
 
                             <div class="logo">
                                 <a class="d-block" href="/">
-                                    <img loading="lazy" src="{{asset('Template')}}/images/logo-gh-test.png" alt="Constra">
+                                    <img loading="lazy" src="{{ asset('images')}}/PRIMATECH/IMG_6716.png" alt="Constra">
                                 </a>
                             </div><!-- logo end -->
 
-                            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target=".navbar-collapse" aria-controls="navbar-collapse" aria-expanded="false" aria-label="Toggle navigation">
+                            <button class="navbar-toggler" type="button" data-toggle="collapse"
+                                data-target=".navbar-collapse" aria-controls="navbar-collapse" aria-expanded="false"
+                                aria-label="Toggle navigation">
                                 <span class="navbar-toggler-icon"></span>
                             </button>
 
-                            <div id="navbar-collapse" class="collapse navbar-collapse">
+                            <div id="navbar-collapse" class="">
                                 <ul class="nav navbar-nav ml-auto align-items-center">
 
                                     <li class="nav-item"><a class="nav-link" href="/">Beranda</a></li>
@@ -73,11 +77,12 @@
                                     <li class="nav-item"><a class="nav-link" href="/artikel">Artikel</a></li>
 
                                     <li class="nav-item dropdown">
-                                        <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown">Informasi <i class="fa fa-angle-down"></i></a>
+                                        <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown">Informasi <i
+                                                class="fa fa-angle-down"></i></a>
                                         <ul class="dropdown-menu" role="menu">
-                                            <li><a href="/dokter/profil">Members</a></li>
+                                            <li><a href="/member/profil">Member</a></li>
                                             <li><a href="/galeri">Galeri</a></li>
-                                            <li><a href="/karir">Karir</a></li>
+                                            <li><a href="/project">Project</a></li>
                                             <li><a href="/partnership">Our Partners</a></li>
                                         </ul>
                                     </li>
@@ -126,19 +131,28 @@
                 <div class="container">
                     <div class="row justify-content-between">
                         <div class="col-lg-4 col-md-6 footer-widget footer-about">
-                            <h3 class="widget-title">Tentang Kami</h3>
-                            <img loading="lazy" width="200px" class="footer-logo" src="{{ asset('Template') }}/images/logo-gh-test-white.png" alt="Constra">
-                            <p class="text-white">IQ PRIMATECH adalah salah satu Study Club mahasiswa Teknik Informatika Universitas Islam Riau yang berfokus pada bidang programming.</p>
-                            <a href="/tentang" class="text-white">Selengkapnya</a>
+                            <h3 class="widget-title mb-5">Tentang Kami</h3>
+                            <div class="footer-logo d-flex justify-content-center">
+                                <img loading="lazy" width="300px" class=""
+                                    src="{{asset('images')}}/PRIMATECH/footer.png" alt="Constra">
+                            </div>
+                            <p class="text-white mt-5">IQ PRIMATECH adalah salah satu Study Club mahasiswa Teknik
+                                Informatika
+                                Universitas Islam Riau yang berfokus pada bidang programming.</p>
+                            <a href="/tentang" class="text-white">Selengkapnya <i
+                                class="fas fa-arrow-right"></i></a>
                             <br>
                             <hr>
                             <p class="text-white">Temukan kami:</p>
                             <div class="footer-social">
                                 <ul>
-                                    <li><a href="https://www.facebook.com/" aria-label="Facebook"><i class="fab fa-facebook-f text-white"></i></a></li>
-                                    <li><a href="https://www.youtube.com/@iqprimatech" aria-label="Youtube"><i class="fab fa-youtube text-white"></i></a>
+                                    <li><a href="https://www.facebook.com/" aria-label="Facebook"><i
+                                                class="fab fa-facebook-f text-white"></i></a></li>
+                                    <li><a href="https://www.youtube.com/@iqprimatech" aria-label="Youtube"><i
+                                                class="fab fa-youtube text-white"></i></a>
                                     </li>
-                                    <li><a href="https://www.instagram.com/iq.primatech/" aria-label="Instagram"><i class="fab fa-instagram text-white"></i></a></li>
+                                    <li><a href="https://www.instagram.com/iq.primatech/" aria-label="Instagram"><i
+                                                class="fab fa-instagram text-white"></i></a></li>
                                 </ul>
                             </div><!-- Footer social end -->
                         </div><!-- Col end -->
@@ -155,9 +169,11 @@
                             <h3 class="widget-title">Project</h3>
                             <ul class="list-arrow">
                                 @foreach($lyn as $lyns)
-                                <li><a href="/services/detail/{{ $lyns->slug }}" class="text-white">{{ $lyns->poliklinik }} </a></li>
+                                <li><a href="/services/detail/{{ $lyns->slug }}" class="text-white">{{ $lyns->poliklinik
+                                        }} </a></li>
                                 @endforeach
-                                <li><a href="/services" class="text-white">Selengkapnya <i class="fas fa-arrow-right"></i></a></li>
+                                <li><a href="/services" class="text-white">Selengkapnya <i
+                                            class="fas fa-arrow-right"></i></a></li>
                             </ul>
                         </div><!-- Col end -->
                     </div><!-- Row end -->
@@ -167,11 +183,13 @@
             <div class="copyright">
                 <div class="container">
                     <div class="row align-items-center">
-                        <div class="col-md-6">
+                        <div class="col-md-12">
                             <div class="copyright-info text-white text-center">
-                                <span>Copyright &copy; <script>
+                                <span>Copyright &copy;
+                                    <script>
                                         document.write(new Date().getFullYear())
-                                    </script>, IQ PRIMATECH</span>
+                                    </script>, IQ PRIMATECH
+                                </span>
                             </div>
                         </div>
                     </div><!-- Row end -->
@@ -209,7 +227,8 @@
 
 
         <!-- Google Map API Key-->
-        <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCcABaamniA6OL5YvYSpB3pFMNrXwXnLwU" defer></script>
+        <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCcABaamniA6OL5YvYSpB3pFMNrXwXnLwU"
+            defer></script>
         <!-- Google Map Plugin-->
 
 
@@ -220,6 +239,10 @@
         <script src="{{asset('Template')}}/js/script.js"></script>
 
         <script src="https://apis.google.com/js/platform.js"></script>
+
+        <!-- Navbar Animation -->
+        <script src="{{asset('Template')}}/js/navbar.js"></script>
+
 
     </div><!-- Body inner end -->
 </body>

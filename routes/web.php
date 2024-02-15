@@ -8,14 +8,14 @@ use App\Http\Controllers\AdminController;
 use App\Http\Controllers\LoginController;
 use App\Http\Controllers\User_Controller;
 use App\Http\Controllers\BannerController;
-use App\Http\Controllers\DokterController;
+use App\Http\Controllers\MemberController;
 use App\Http\Controllers\FolderController;
 use App\Http\Controllers\GaleriController;
 use App\Http\Controllers\LamaranController;
 use App\Http\Controllers\ElibraryController;
-use App\Http\Controllers\LowonganController;
+use App\Http\Controllers\ProjectController;
 use App\Http\Controllers\BlogGuestController;
-use App\Http\Controllers\jadwalDokterController;
+use App\Http\Controllers\JadwalMemberController;
 use App\Http\Controllers\LayananImageController;
 use App\Http\Controllers\LayananDetailController;
 use App\Http\Controllers\FasilitasLayananController;
@@ -26,44 +26,44 @@ use App\Http\Controllers\KategoriGaleriController;
 use App\Http\Controllers\YtLinkController;
 
 // halaman guest
-Route::get('/', [MainController::class, 'index'])->middleware('guest');
-Route::get('/tentang', [MainController::class, 'tentang'])->middleware('guest');
+Route::get('/', [MainController::class, 'index']);
+Route::get('/tentang', [MainController::class, 'tentang']);
 
 
 //blog guest
-Route::get('/artikel', [BlogGuestController::class, 'index'])->middleware('guest');
-Route::get('/artikel/{blog}', [BlogGuestController::class, 'show'])->middleware('guest');
+Route::get('/artikel', [BlogGuestController::class, 'index']);
+Route::get('/artikel/{blog}', [BlogGuestController::class, 'show']);
 
 // dokter guest
-Route::get('/dokter/profil', [MainController::class, 'profilDokter'])->middleware('guest');
-Route::get('/dokter/jadwal', [MainController::class, 'jadwalDokter'])->middleware('guest');
-Route::get('/dokter/profil/{dokter}', [MainController::class, 'profilDokterDetail'])->middleware('guest');
+Route::get('/member/profil', [MainController::class, 'profilMember']);
+Route::get('/member/jadwal', [MainController::class, 'jadwalMember']);
+Route::get('/member/profil/{member}', [MainController::class, 'profilMemberDetail']);
 
 // layanan guest
-Route::get('/services', [MainController::class, 'layananIndex'])->middleware('guest');
-Route::get('/services/detail/{layanan}', [MainController::class, 'layananDetail'])->middleware('guest');
-Route::get('/services/layanan-poliklinik', [MainController::class, 'layananPoliklinik'])->middleware('guest');
-Route::get('/services/layanan-poliklinik/detail/{layanan_poliklinik}', [MainController::class, 'layananPoliklinikDetail'])->middleware('guest');
-Route::get('/services/fasilitas-layanan', [MainController::class, 'fasilitasLayanan'])->middleware('guest');
+Route::get('/services', [MainController::class, 'layananIndex']);
+Route::get('/services/detail/{layanan}', [MainController::class, 'layananDetail']);
+Route::get('/services/layanan-poliklinik', [MainController::class, 'layananPoliklinik']);
+Route::get('/services/layanan-poliklinik/detail/{layanan_poliklinik}', [MainController::class, 'layananPoliklinikDetail']);
+Route::get('/services/fasilitas-layanan', [MainController::class, 'fasilitasLayanan']);
 
 // elibrary
-Route::get('/e-library', [MainController::class, 'elibraryIndex'])->middleware('guest');
+Route::get('/e-library', [MainController::class, 'elibraryIndex']);
 
 // karir guest
-Route::get('/karir', [MainController::class, 'karirIndex'])->middleware('guest');
-Route::get('/karir/{lowongan}', [MainController::class, 'karirShow'])->middleware('guest');
-Route::post('/karir', [MainController::class, 'store'])->middleware('guest');
+Route::get('/project', [MainController::class, 'projectIndex']);
+Route::get('/project/{lowongan}', [MainController::class, 'projectShow']);
+Route::post('/project', [MainController::class, 'store']);
 
 // galeri guest
-Route::get('/galeri', [MainController::class, 'galeriIndex'])->middleware('guest');
+Route::get('/galeri', [MainController::class, 'galeriIndex']);
 
-// partnership
-Route::get('/partnership', [MainController::class, 'partnerIndex'])->middleware('guest');
+// partnershipn
+Route::get('/partnership', [MainController::class, 'partnerIndex']);
 
 // <-- Bagian Admin -->
 
 // form login dan logout
-Route::get('/login', [LoginController::class, 'index'])->name('login')->middleware('guest');
+Route::get('/login', [LoginController::class, 'index'])->name('login');
 Route::post('/login', [LoginController::class, 'auth']);
 Route::post('/logout', [LoginController::class, 'logout']);
 
@@ -88,16 +88,16 @@ Route::resource('/dashboard/user', User_Controller::class)->middleware('auth');
 Route::resource('/dashboard/banner', BannerController::class)->middleware('auth');
 
 // Dokter
-Route::resource('/dashboard/dokter', DokterController::class)->middleware('auth');
+Route::resource('/dashboard/dokter', MemberController::class)->middleware('auth');
 
 // jadwal dokter
-Route::get('/dashboard/dokter-jadwal/{dokter}', [jadwalDokterController::class, 'index'])->middleware('auth');
-Route::get('/dashboard/jadwal-edit/{id}', [jadwalDokterController::class, 'edit'])->middleware('auth');
-Route::resource('/dashboard/jadwal-edit', jadwalDokterController::class,)->middleware('auth');
-Route::post('/dashboard/dokter-jadwal', [jadwalDokterController::class, 'store'])->middleware('auth');
+Route::get('/dashboard/dokter-jadwal/{dokter}', [JadwalMemberController::class, 'index'])->middleware('auth');
+Route::get('/dashboard/jadwal-edit/{id}', [JadwalMemberController::class, 'edit'])->middleware('auth');
+Route::resource('/dashboard/jadwal-edit', JadwalMemberController::class,)->middleware('auth');
+Route::post('/dashboard/dokter-jadwal', [JadwalMemberController::class, 'store'])->middleware('auth');
 
 // lowongan
-Route::resource('/dashboard/lowongan', LowonganController::class)->middleware('auth');
+Route::resource('/dashboard/project', ProjectController::class)->middleware('auth');
 Route::get('/dashboard/lamaran/{lowongan}', [LamaranController::class, 'index'])->middleware('auth');
 Route::resource('/dashboard/lamaran', LamaranController::class)->middleware('auth');
 

@@ -67,7 +67,7 @@
                                     <th scope="col" class="col-4">Judul Post</th>
                                     <th scope="col">Kategori Post</th>
                                     <th scope="col">Penulis</th>
-                                    <th scope="col">tanggal Publish</th>
+                                    <th scope="col">Tanggal Publikasi</th>
                                     <th scope="col">Aksi</th>
                                 </tr>
                             </thead>
@@ -104,23 +104,23 @@
 
     <!-- data dokter -->
     <div class="pagetitle">
-        <h1>Data Dokter</h1>
+        <h1>Data Member</h1>
     </div>
     <div class="row">
-        @foreach($dokters as $dokter)
+        @foreach($members as $member)
         <div class="col-md-4">
             <div class="card" style="width: 18rem;">
-                <img src="{{ asset('storage/'.$dokter->image) }}" class="card-img-top" alt="...">
+                <img src="{{ asset('storage/'.$member->image) }}" class="card-img-top" alt="...">
                 <div class="card-body">
-                    <h5 class="card-title">{{$dokter->nama}}</h5>
-                    <p class="card-text">Poliklinik: {{$dokter->poliklinik->poliklinik}}</p>
-                    <a href="/dashboard/dokter/{{$dokter->slug}}" class="btn btn-primary">Detail</a>
+                    <h5 class="card-title">{{$member->nama}}</h5>
+                    <p class="card-text">Poliklinik: {{$member->poliklinik->poliklinik}}</p>
+                    <a href="/dashboard/dokter/{{$member->slug}}" class="btn btn-primary">Detail</a>
                 </div>
             </div>
         </div>
         @endforeach
         <div class="d-flex justify-content-start">
-            {{$dokters->links()}}
+            {{$members->links()}}
         </div>
     </div>
 

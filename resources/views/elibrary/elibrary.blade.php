@@ -6,7 +6,7 @@
 <div class="container mt-4">
     <div class="row text-center">
         <div class="col-12">
-            <h2 class="section-title">IQ PRIMATECH</h2>
+            <h2 class="section-title" style="margin-top: 100px">IQ PRIMATECH</h2>
             <h3 class="section-sub-title">E-Library</h3>
         </div>
     </div>

@@ -5,7 +5,7 @@
     <meta charset="utf-8">
     <meta content="width=device-width, initial-scale=1.0" name="viewport">
 
-    <title>Admin RSGH - {{ $tittle }} </title>
+    <title> {{ $tittle }} - Admin Primatech </title>
     <meta content="" name="description">
     <meta content="" name="keywords">
 
@@ -46,7 +46,7 @@
         <div class="d-flex align-items-center justify-content-between">
             <a href="#" class="logo d-flex align-items-center">
                 <img src="assets/img/logo.png" alt="">
-                <span class="d-none d-lg-block">RS Graha hermine</span>
+                <span class="d-none d-lg-block">IQ Primatech</span>
             </a>
             <i class="bi bi-list toggle-sidebar-btn"></i>
         </div>
@@ -111,7 +111,7 @@
             <li class="nav-item">
                 <a class="nav-link {{ ($tittle === "Dokter") ? '' : 'collapsed'}}" href="/dashboard/dokter">
                     <i class="bi bi-people-fill"></i>
-                    <span>Kelola Dokter</span>
+                    <span>Kelola Member</span>
                 </a>
             </li>
 
@@ -149,7 +149,7 @@
                     </li>
                     <li>
                         <a href="/blog">
-                            <i class="bi bi-circle"></i><span>RSGH Blog</span>
+                            <i class="bi bi-circle"></i><span>Blog</span>
                         </a>
                     </li>
                 </ul>
@@ -178,9 +178,9 @@
                 </a>
             </li> -->
             <li class="nav-item">
-                <a class="nav-link {{ ($tittle === "Lowongan") ? '' : 'collapsed'}}" href="/dashboard/lowongan">
-                    <i class="bi bi-bag-fill"></i>
-                    <span>Kelola Lowongan</span>
+                <a class="nav-link {{ ($tittle === "Lowongan") ? '' : 'collapsed'}}" href="/dashboard/project">
+                    <i class="bi bi-archive-fill"></i>
+                    <span>Kelola Project</span>
                 </a>
             </li>
             <li class="nav-item">
@@ -203,10 +203,10 @@
     <!-- ======= Footer ======= -->
     <footer id="footer" class="footer">
         <div class="copyright">
-            &copy; Copyright <strong><span>NiceAdmin</span></strong>. All Rights Reserved
+            &copy; Copyright <strong><span>RislanJAGO</span></strong>. All Rights Reserved
         </div>
         <div class="credits">
-            Designed by <a href="https://bootstrapmade.com/">BootstrapMade</a>
+            Designed by <a href="https://bootstrapmade.com/">RislanJAGO</a>
         </div>
     </footer><!-- End Footer -->
 

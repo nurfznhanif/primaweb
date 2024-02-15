@@ -18,6 +18,6 @@ class Layanan_poliklinik extends Model
 
     public function dokter()
     {
-        return $this->hasMany(Dokter::class);
+        return $this->hasMany(Member::class);
     }
 }

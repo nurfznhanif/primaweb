@@ -5,16 +5,17 @@ namespace Database\Seeders;
 // use Illuminate\Database\Console\Seeds\WithoutModelEvents;
 use App\Models\Blog;
 use App\Models\User;
-use App\Models\Dokter;
+use App\Models\Member;
 use App\Models\Folder;
 use App\Models\Galeri;
 use App\Models\Elibrary;
-use App\Models\JadwalDokter;
+use App\Models\JadwalMember;
 use App\Models\LayananImage;
 use App\Models\PostCategory;
 use Illuminate\Database\Seeder;
 use App\Models\Fasilitas_Layanan;
 use App\Models\KategoriGaleri;
+use App\Models\KategoriProject;
 use App\Models\Layanan_poliklinik;
 use App\Models\Partnership;
 use App\Models\YtLink;
@@ -32,6 +33,27 @@ class DatabaseSeeder extends Seeder
             'username' => 'kusuka',
             'image' => '1676100893.jpg',
             'password' => bcrypt('123456')
+        ]);
+
+        User::create([
+            'nama' => 'Tri Rislan Febrika',
+            'role' => '1',
+            'email' => 'admin@gov.id',
+            'username' => 'rislan',
+            'image' => '',
+            'password' => bcrypt('admin')
+        ]);
+
+        Member::create([
+            'nama' => 'Budi',
+            'slug' => 'budi',
+            'poliklinik_id' => '1',
+            'jenis_kelamin' => 'Laki-laki',
+            'tanggal_lahir' => '1988-07-19',
+            'alamat_domisili' => 'Kartama',
+            'no_hp' => '123456',
+            'email' => 'budi@gmail.com',
+            'riwayat' => 'Budi adalah seorang dokter'
         ]);
 
         Layanan_poliklinik::create([
@@ -67,6 +89,14 @@ class DatabaseSeeder extends Seeder
         ]);
         KategoriGaleri::create([
             'galeri_kategori' => 'Pengabdian Masyarakat',
+        ]);
+
+        // Project Categories
+        KategoriProject::create([
+            'project_kategori' => 'Web Project'
+        ]);
+        KategoriProject::create([
+            'project_kategori' => 'Mobile Project'
         ]);
 
         // kategori post

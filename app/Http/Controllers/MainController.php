@@ -5,18 +5,19 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use App\Models\Blog;
 use App\Models\Banner;
-use App\Models\Dokter;
+use App\Models\Member;
 use App\Models\Elibrary;
 use App\Models\Fasilitas_Layanan;
 use App\Models\Folder;
-use App\Models\JadwalDokter;
+use App\Models\JadwalMember;
 use App\Models\Lamaran;
-use App\Models\Lowongan;
+use App\Models\Project;
 use App\Models\Galeri;
 use App\Models\Layanan_poliklinik;
 use App\Models\LayananImage;
 use App\Models\Partnership;
 use App\Models\KategoriGaleri;
+use App\Models\KategoriProject;
 use App\Models\YtLink;
 
 class MainController extends Controller
@@ -42,31 +43,31 @@ class MainController extends Controller
         ]);
     }
 
-    public function profilDokter()
+    public function profilMember()
     {
-        return view('dokter/profilDokter', [
-            'tittle' => "Profil Dokter",
-            'datas' => Dokter::paginate(6),
+        return view('member/profilMember', [
+            'tittle' => "Profil Member",
+            'datas' => Member::paginate(6),
             'lyn' => Layanan_poliklinik::paginate(5)
         ]);
     }
 
-    public function jadwalDokter()
+    public function jadwalMember()
     {
-        return view('dokter/jadwal', [
-            'tittle' => 'Jadwal Dokter',
-            'dokters' => Dokter::latest()->filter(request(['search', 'poliklinik']))->paginate(7),
+        return view('member/jadwal', [
+            'tittle' => 'Jadwal Member',
+            'members' => Member::latest()->filter(request(['search', 'poliklinik']))->paginate(7),
             'poliklinik' => Layanan_poliklinik::all(),
             'lyn' => Layanan_poliklinik::paginate(5)
         ]);
     }
 
-    public function profilDokterDetail(Dokter $dokter)
+    public function profilMemberDetail(Member $member)
     {
-        return view('dokter/profilDokterSingle', [
-            'tittle' => "profil Dokter",
-            'jadwal' => JadwalDokter::where('dokter_id', $dokter->id)->first(),
-            'data' => $dokter,
+        return view('member/profilMemberSingle', [
+            'tittle' => "profil Member",
+            'jadwal' => JadwalMember::where('member_id', $member->id)->first(),
+            'data' => $member,
             'lyn' => Layanan_poliklinik::paginate(5)
         ]);
     }
@@ -97,7 +98,7 @@ class MainController extends Controller
         return view('layanan/layananPoliklinikDetail', [
             'tittle' => 'Layanan',
             'poliklinik' => $layanan_poliklinik,
-            'dokters' => Dokter::where('poliklinik_id', $layanan_poliklinik->id)->get(),
+            'dokters' => Member::where('poliklinik_id', $layanan_poliklinik->id)->get(),
             'images' => LayananImage::where('layanan_id', $layanan_poliklinik->id)->get(),
             'lyn' => Layanan_poliklinik::paginate(5)
         ]);
@@ -126,19 +127,20 @@ class MainController extends Controller
 
 
     // karir
-    public function karirIndex()
+    public function projectIndex()
     {
-        return view('karir/karirGuest', [
-            'tittle' => 'Karir',
-            'lowongan' => Lowongan::latest()->filter(request(['search']))->paginate(10)->withQueryString(),
+        return view('project/projectGuest', [
+            'tittle' => 'Project',
+            'galeris' => Project::latest()->filter(request(['search']))->paginate(9)->withQueryString(),
+            'kategories' => KategoriProject::all(),
             'lyn' => Layanan_poliklinik::paginate(5)
         ]);
     }
 
-    public function karirShow(Lowongan $lowongan)
+    public function projectShow(Project $lowongan)
     {
-        return view('karir/karirGuestDetail', [
-            'tittle' => 'Karir',
+        return view('project/projectGuestDetail', [
+            'tittle' => 'project',
             'lowongan' => $lowongan,
             'lyn' => Layanan_poliklinik::paginate(5)
         ]);

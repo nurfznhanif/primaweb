@@ -5,7 +5,7 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use App\Models\Banner;
 use App\Models\Blog;
-use App\Models\Dokter;
+use App\Models\Member;
 
 class AdminController extends Controller
 {
@@ -15,7 +15,7 @@ class AdminController extends Controller
             'tittle' => 'Dashboard',
             'data' => Banner::all(),
             'posts' => Blog::latest()->filter(request(['search', 'category']))->paginate(3)->withQueryString(),
-            'dokters' => Dokter::paginate(3)
+            'members' => Member::paginate(3)
         ]);
     }
 }
