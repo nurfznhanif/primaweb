@@ -18,7 +18,7 @@ jQuery(function ($) {
 			var headerTopBar = $('.top-bar').outerHeight();
 			var headerNav = $('.header-two .site-navigation');
 
-			
+
 			if ($(window).scrollTop() > headerTopBar) {
 				$(headerNav).addClass('navbar-fixed');
 				$('.header-two').css('margin-bottom', headerNav.outerHeight());

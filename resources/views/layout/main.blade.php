@@ -18,28 +18,28 @@
 
     <!-- Favicon
 ================================================== -->
+<link href="assets/img/fav-icon.png" rel="website icon">
 
     <!-- CSS
 ================================================== -->
     <!-- Beranda -->
-    <link href="{{ asset('beranda') }}" rel="stylesheet">
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
     <!-- Bootstrap -->
-    <link rel="stylesheet" href="{{asset('Template')}}/plugins/bootstrap/bootstrap.min.css">
+    <link rel="stylesheet" href="{{ asset('Template') }}/plugins/bootstrap/bootstrap.min.css">
     <!-- FontAwesome -->
-    <link rel="stylesheet" href="{{asset('Template')}}/plugins/fontawesome/css/all.min.css">
+    <link rel="stylesheet" href="{{ asset('Template') }}/plugins/fontawesome/css/all.min.css">
     <!-- Animation -->
-    <link rel="stylesheet" href="{{asset('Template')}}/plugins/animate-css/animate.css">
+    <link rel="stylesheet" href="{{ asset('Template') }}/plugins/animate-css/animate.css">
     <!-- slick Carousel -->
-    <link rel="stylesheet" href="{{asset('Template')}}/plugins/slick/slick.css">
-    <link rel="stylesheet" href="{{asset('Template')}}/plugins/slick/slick-theme.css">
+    <link rel="stylesheet" href="{{ asset('Template') }}/plugins/slick/slick.css">
+    <link rel="stylesheet" href="{{ asset('Template') }}/plugins/slick/slick-theme.css">
     <!-- Colorbox -->
-    <link rel="stylesheet" href="{{asset('Template')}}/plugins/colorbox/colorbox.css">
+    <link rel="stylesheet" href="{{ asset('Template') }}/plugins/colorbox/colorbox.css">
     <!-- Template styles-->
-    <link rel="stylesheet" href="{{asset('Template')}}/css/style.css">
-    <link rel="stylesheet" href="{{asset('Template')}}/css/beranda.css">
+    <link rel="stylesheet" href="{{ asset('Template') }}/css/style.css">
+    <link rel="stylesheet" href="{{ asset('Template') }}/css/beranda.css">
     <!-- wa floating btn-->
-    <link rel="stylesheet" href="{{asset('Template')}}/css/wabtn.css">
+    <link rel="stylesheet" href="{{ asset('Template') }}/css/wabtn.css">
 
 </head>
 
@@ -55,14 +55,13 @@
 
                             <div class="logo">
                                 <a class="d-block" href="/">
-                                    <img loading="lazy" src="assets/img/primatech.PNG"
-                                        alt="Constra">
+                                    <img loading="lazy" src="assets/img/primatechwhite.png" alt="PRIMATECH">
                                 </a>
                             </div><!-- logo end -->
 
                             <button class="navbar-toggler" type="button" data-toggle="collapse"
                                 data-target=".navbar-collapse" aria-controls="navbar-collapse" aria-expanded="false"
-                                aria-label="Toggle navigation" style="border-radius: 3px">
+                                aria-label="Toggle navigation">
                                 <span class="navbar-toggler-icon"></span>
                             </button>
 
@@ -86,7 +85,8 @@
                                             <li><a class="dr" href="/partnership">Our Partners</a></li>
                                         </ul>
                                     </li>
-                                    <li class="nav-item"><a class="nav-link nb" href="/e-library">E-Library</a></li>
+                                    <li class="nav-item"><a class="nav-link nb"
+                                            href="https://tiny.cc/G-WORK-WEB">Workshop</a></li>
                                 </ul>
                             </div>
                         </nav>
@@ -107,7 +107,7 @@
         <!-- floating wa -->
 
         <div class="floating-container" id="tooltip">
-            <img src="{{asset('Template')}}/images/icon-customer.png" class="floating-button text-dark">
+            <img src="{{ asset('Template') }}/images/icon-customer.png" class="floating-button text-dark">
             <div class="element-container">
 
                 <span class="float-element tooltip-left" id="tooltip-linktree">
@@ -128,19 +128,18 @@
 
         <footer id="footer" class="footer">
             <div class="footer-main">
-                <div class="container">
-                    <div class="row justify-content-between">
+                <div class="container container-footer">
+                    <div class="row mt justify-content-between">
                         <div class="col-lg-4 col-md-6 footer-widget footer-about">
                             <h3 class="widget-title mb-5">Tentang Kami</h3>
                             <div class="footer-logo d-flex justify-content-center">
                                 <img loading="lazy" width="300px" class=""
-                                    src="{{asset('images')}}/PRIMATECH/footer.png" alt="Constra">
+                                    src="{{ asset('images') }}/PRIMATECH/footer.png" alt="Constra">
                             </div>
                             <p class="text-white mt-5">IQ PRIMATECH adalah salah satu Study Club mahasiswa Teknik
                                 Informatika
                                 Universitas Islam Riau yang berfokus pada bidang programming.</p>
-                            <a href="/tentang" class="text-white">Selengkapnya <i
-                                class="fas fa-arrow-right"></i></a>
+                            <a href="/tentang" class="text-white">Selengkapnya <i class="fas fa-arrow-right"></i></a>
                             <br>
                             <hr>
                             <p class="text-white">Temukan kami:</p>
@@ -157,20 +156,20 @@
                             </div><!-- Footer social end -->
                         </div><!-- Col end -->
 
-                        <div class="col-lg-4 col-md-6 footer-widget mt-5 mt-md-0">
+                        <div class="col-lg-4 col-md-6 footer-widget mt-5 mt-md-0 forum">
                             <h3 class="widget-title">Forum programming</h3>
                             <div class="working-hours text-white">
                                 Memfasilitasi pertukaran informasi mengenai perkembangan dan penerapan teknologi
-                                modern, dan memberikan kesempatan dan relasi kepada mahasiswa dan masyarakat umum.
+                                modern, serta memberikan kesempatan dan relasi kepada mahasiswa dan masyarakat umum.
                             </div>
                         </div><!-- Col end -->
 
-                        <div class="col-lg-3 col-md-6 mt-5 mt-lg-0 footer-widget">
+                        <div class="col-lg-3 col-md-6 mt-5 mt-lg-0 footer-widget project">
                             <h3 class="widget-title">Project</h3>
                             <ul class="list-arrow">
-                                @foreach($lyn as $lyns)
-                                <li><a href="/services/detail/{{ $lyns->slug }}" class="text-white">{{ $lyns->poliklinik
-                                        }} </a></li>
+                                @foreach ($lyn as $lyns)
+                                    <li><a href="/services/detail/{{ $lyns->slug }}"
+                                            class="text-white">{{ $lyns->poliklinik }} </a></li>
                                 @endforeach
                                 <li><a href="/services" class="text-white">Selengkapnya <i
                                             class="fas fa-arrow-right"></i></a></li>
@@ -182,7 +181,7 @@
 
             <div class="copyright">
                 <div class="container">
-                    <div class="row align-items-center">
+                    <div class="row mt align-items-center">
                         <div class="col-md-12">
                             <div class="copyright-info text-white text-center">
                                 <span>Copyright &copy;
@@ -214,34 +213,33 @@
         </script> -->
 
         <!-- initialize jQuery Library -->
-        <script src="{{asset('Template')}}/plugins/jQuery/jquery.min.js"></script>
+        <script src="{{ asset('Template') }}/plugins/jQuery/jquery.min.js"></script>
         <!-- Bootstrap jQuery -->
-        <script src="{{asset('Template')}}/plugins/bootstrap/bootstrap.min.js" defer></script>
+        <script src="{{ asset('Template') }}/plugins/bootstrap/bootstrap.min.js" defer></script>
         <!-- Slick Carousel -->
-        <script src="{{asset('Template')}}/plugins/slick/slick.min.js"></script>
-        <script src="{{asset('Template')}}/plugins/slick/slick-animation.min.js"></script>
+        <script src="{{ asset('Template') }}/plugins/slick/slick.min.js"></script>
+        <script src="{{ asset('Template') }}/plugins/slick/slick-animation.min.js"></script>
         <!-- Color box -->
-        <script src="{{asset('Template')}}/plugins/colorbox/jquery.colorbox.js"></script>
+        <script src="{{ asset('Template') }}/plugins/colorbox/jquery.colorbox.js"></script>
         <!-- shuffle -->
-        <script src="{{asset('Template')}}/plugins/shuffle/shuffle.min.js" defer></script>
+        <script src="{{ asset('Template') }}/plugins/shuffle/shuffle.min.js" defer></script>
 
 
         <!-- Google Map API Key-->
-        <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCcABaamniA6OL5YvYSpB3pFMNrXwXnLwU"
-            defer></script>
+        <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCcABaamniA6OL5YvYSpB3pFMNrXwXnLwU" defer></script>
         <!-- Google Map Plugin-->
 
 
 
-        <script src="{{asset('Template')}}/plugins/google-map/map.js" defer></script>
+        <script src="{{ asset('Template') }}/plugins/google-map/map.js" defer></script>
 
         <!-- Template custom -->
-        <script src="{{asset('Template')}}/js/script.js"></script>
+        <script src="{{ asset('Template') }}/js/script.js"></script>
 
         <script src="https://apis.google.com/js/platform.js"></script>
 
         <!-- Navbar Animation -->
-        <script src="{{asset('Template')}}/js/navbar.js"></script>
+        <script src="{{ asset('Template') }}/js/navbar.js"></script>
 
 
     </div><!-- Body inner end -->

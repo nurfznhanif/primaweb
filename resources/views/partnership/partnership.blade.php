@@ -2,10 +2,10 @@
 
 @section('content')
 
-<section id="project-area" class="project-area solid-bg">
+<section id="project-area" class="project-area">
     <div class="container">
         <div class="row text-center">
-            <div class="col-lg">
+            <div class="col-lg-12">
                 <h2 class="section-title">IQ PRIMATECH</h2>
                 <h3 class="section-sub-title">Our Partnership</h3>
             </div>

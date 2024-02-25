@@ -31,7 +31,7 @@ class MainController extends Controller
             'galeris' => Galeri::paginate(6),
             'partnership' => Partnership::paginate(6),
             'links' => YtLink::paginate(1),
-            'lyn' => Layanan_poliklinik::paginate(5)
+            'lyn' => Layanan_poliklinik::orderBy('created_at', 'desc')->take(1)->get()
         ]);
     }
 
@@ -39,7 +39,7 @@ class MainController extends Controller
     {
         return view('/tentang', [
             'tittle' => 'Tentang Kami',
-            'lyn' => Layanan_poliklinik::paginate(5)
+            'lyn' => Layanan_poliklinik::orderBy('created_at', 'desc')->take(1)->get()
         ]);
     }
 
@@ -48,7 +48,7 @@ class MainController extends Controller
         return view('member/profilMember', [
             'tittle' => "Profil Member",
             'datas' => Member::paginate(6),
-            'lyn' => Layanan_poliklinik::paginate(5)
+            'lyn' => Layanan_poliklinik::orderBy('created_at', 'desc')->take(1)->get()
         ]);
     }
 
@@ -58,7 +58,7 @@ class MainController extends Controller
             'tittle' => 'Jadwal Member',
             'members' => Member::latest()->filter(request(['search', 'poliklinik']))->paginate(7),
             'poliklinik' => Layanan_poliklinik::all(),
-            'lyn' => Layanan_poliklinik::paginate(5)
+            'lyn' => Layanan_poliklinik::orderBy('created_at', 'desc')->take(1)->get()
         ]);
     }
 
@@ -68,7 +68,7 @@ class MainController extends Controller
             'tittle' => "profil Member",
             'jadwal' => JadwalMember::where('member_id', $member->id)->first(),
             'data' => $member,
-            'lyn' => Layanan_poliklinik::paginate(5)
+            'lyn' => Layanan_poliklinik::orderBy('created_at', 'desc')->take(1)->get()
         ]);
     }
 
@@ -78,7 +78,7 @@ class MainController extends Controller
     {
         return view('layanan/layananData', [
             'tittle' => 'Layanan',
-            'lyn' => Layanan_poliklinik::paginate(5)
+            'lyn' => Layanan_poliklinik::orderBy('created_at', 'desc')->take(1)->get()
         ]);
     }
 
@@ -89,7 +89,7 @@ class MainController extends Controller
         return view('layanan/layananPoliklinik', [
             'tittle' => 'Layanan',
             'poliklinik' => Layanan_poliklinik::all(),
-            'lyn' => Layanan_poliklinik::paginate(5)
+            'lyn' => Layanan_poliklinik::orderBy('created_at', 'desc')->take(1)->get()
         ]);
     }
 
@@ -100,7 +100,7 @@ class MainController extends Controller
             'poliklinik' => $layanan_poliklinik,
             'dokters' => Member::where('poliklinik_id', $layanan_poliklinik->id)->get(),
             'images' => LayananImage::where('layanan_id', $layanan_poliklinik->id)->get(),
-            'lyn' => Layanan_poliklinik::paginate(5)
+            'lyn' => Layanan_poliklinik::orderBy('created_at', 'desc')->take(1)->get()
         ]);
     }
 
@@ -110,7 +110,7 @@ class MainController extends Controller
         return view('layanan/fasilitasLayanan', [
             'tittle' => 'Layanan',
             'fasilitas' => Fasilitas_Layanan::latest()->filter(request(['search']))->paginate(6),
-            'lyn' => Layanan_poliklinik::paginate(5)
+            'lyn' => Layanan_poliklinik::orderBy('created_at', 'desc')->take(1)->get()
         ]);
     }
 
@@ -121,7 +121,7 @@ class MainController extends Controller
             'tittle' => 'E-Library',
             'libraries' => Elibrary::latest()->filter(request(['search']))->paginate(6),
             'folder' => Folder::all(),
-            'lyn' => Layanan_poliklinik::paginate(5)
+            'lyn' => Layanan_poliklinik::orderBy('created_at', 'desc')->take(1)->get()
         ]);
     }
 
@@ -133,7 +133,7 @@ class MainController extends Controller
             'tittle' => 'Project',
             'galeris' => Project::latest()->filter(request(['search']))->paginate(9)->withQueryString(),
             'kategories' => KategoriProject::all(),
-            'lyn' => Layanan_poliklinik::paginate(5)
+            'lyn' => Layanan_poliklinik::orderBy('created_at', 'desc')->take(1)->get()
         ]);
     }
 
@@ -142,7 +142,7 @@ class MainController extends Controller
         return view('project/projectGuestDetail', [
             'tittle' => 'project',
             'lowongan' => $lowongan,
-            'lyn' => Layanan_poliklinik::paginate(5)
+            'lyn' => Layanan_poliklinik::orderBy('created_at', 'desc')->take(1)->get()
         ]);
     }
 
@@ -183,7 +183,7 @@ class MainController extends Controller
             'tittle' => 'Galeri',
             'galeris' => Galeri::latest()->filter(request(['search']))->paginate(9)->withQueryString(),
             'kategories' => KategoriGaleri::all(),
-            'lyn' => Layanan_poliklinik::paginate(5)
+            'lyn' => Layanan_poliklinik::orderBy('created_at', 'desc')->take(1)->get()
         ]);
     }
 
@@ -192,7 +192,7 @@ class MainController extends Controller
         return view('partnership/partnership', [
             'tittle' => 'Our Partnership',
             'partnership' => Partnership::all(),
-            'lyn' => Layanan_poliklinik::paginate(5)
+            'lyn' => Layanan_poliklinik::orderBy('created_at', 'desc')->take(1)->get()
         ]);
     }
 }

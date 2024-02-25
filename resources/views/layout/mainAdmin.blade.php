@@ -10,8 +10,7 @@
     <meta content="" name="keywords">
 
     <!-- Favicons -->
-    <link href="{{asset('Template')}}/images/favicon.png" rel="icon">
-    <link href="{{asset('TemplateAdmin')}}/assets/img/apple-touch-icon.png" rel="apple-touch-icon">
+    <link href="assets/img/fav-icon.png" rel="website icon">
 
     <!-- Google Fonts -->
     <link href="https://fonts.gstatic.com" rel="preconnect">
