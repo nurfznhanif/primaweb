@@ -34,7 +34,6 @@
                             <div class="post-meta">
                                 <span class="post-author"><i class="far fa-user"></i>{{ $post->user->nama }}</span>
                                 <span class="post-meta-date"><i class="far fa-calendar"></i>{{$post->created_at}}</span>
-                                <!-- <span class="post-comment"><i class="far fa-comment"></i> 03<a href="#" class="comments-link">Comments</a></span> -->
                             </div>
                             <h2 class="entry-title">
                                 <a href="/artikel/{{$post->slug}}">{{ $post->title }}</a>
@@ -86,16 +85,6 @@
                         </ul>
 
                     </div>
-
-                    <!-- <div class="widget">
-                        <h3 class="widget-title">Categories</h3>
-                        @foreach($categories as $category)
-                        <ul class="arrow nav nav-tabs">
-                            <li><a href="/blogGuest?category={{$category->slug}}">{{ $category->kategori }}</a></li>
-                        </ul>
-                        @endforeach
-                    </div> -->
-
 
                 </div><!-- Sidebar end -->
             </div><!-- Sidebar Col end -->

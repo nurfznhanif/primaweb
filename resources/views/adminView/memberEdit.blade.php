@@ -7,13 +7,13 @@
     <nav>
         <ol class="breadcrumb">
             <li class="breadcrumb-item"><a href="/admin">Dashboard</a></li>
-            <li class="breadcrumb-item"><a href="/dashboard/dokter">Data Member</a></li>
+            <li class="breadcrumb-item"><a href="/dashboard/member">Data Member</a></li>
             <li class="breadcrumb-item active">Edit data</li>
         </ol>
     </nav>
 </div>
 <div class="col-lg-8">
-    <form method="POST" action="/dashboard/dokter/{{$member->slug}}" enctype="multipart/form-data">
+    <form method="POST" action="/dashboard/member/{{$member->slug}}" enctype="multipart/form-data">
         @method('put')
         @csrf
         <div class="mb-3">
@@ -37,21 +37,10 @@
         </div>
         <div class="row">
             <div class="mb-3 col-md-6">
-                <label for="jenis_kelamin" class="form-label">Jenis Kelamin</label>
+            <label for="jenis_kelamin" class="form-label">Jenis Kelamin</label>
                 <select name="jenis_kelamin" class="form-select">
-                    <option value="{{ $member->jenis_kelamin }}" selected>
-                        @if($member->jenis_kelamin == 'P')
-                        Perempuan
-                        @else
-                        Laki-Laki
-                        @endif
-                    </option>
-
-                    @if($member->jenis_kelamin == 'L')
-                    <option value="L">Laki-Laki</option>
-                    @else
-                    <option value="P">Perempuan</option>
-                    @endif
+                    <option value="Laki-Laki" @if (old('jenis_kelamin')=='Laki-Laki' ) selected="selected" @endif>Laki-Laki</option>
+                    <option value="Perempuan" @if (old('jenis_kelamin')=='Perempuan' ) selected="selected" @endif>Perempuan</option>
                 </select>
             </div>
             <div class="mb-3 col-md-6">
@@ -96,37 +85,24 @@
             @enderror
         </div>
 
-        <div class="row">
-            <div class="mb-3 col-md-6">
-                <label for="poliklinik" class="form-label">Poliklinik</label>
-                <select name="poliklinik_id" class="form-select">
-                    @foreach ($poliklinik as $poli)
-                    @if(old('poliklinik_id', $member->poliklinik_id) == $poli->id)
-                    <option value="{{$poli->id}}" selected>{{ $poli->poliklinik }}</option>
-                    @else
-                    <option value="{{$poli->id}}">{{ $poli->poliklinik }}</option>
-                    @endif
-                    @endforeach
-                </select>
+        <div class="mb-3">
+            <label for="posisi" class="form-label">Posisi</label>
+            <input type="text" class="form-control @error('posisi') is-invalid @enderror" name="posisi" id="posisi" value="{{old('posisi', $member->posisi)}}" autofocus>
+            @error('posisi')
+            <div class="invalid-feedback">
+                {{ $message }}
             </div>
-
-            <div class="mb-3 col-md-6">
-                <label for="specialis" class="form-label">Sub-Specialist</label>
-                <input type="specialis" class="form-control @error('specialis') is-invalid @enderror" name="specialis" id="specialis" value="{{old('specialis', $member->specialis)}}" autofocus>
-                @error('specialis')
-                <div class="invalid-feedback">
-                    {{ $message }}
-                </div>
-                @enderror
-            </div>
+            @enderror
         </div>
+
+
 
         <div class="mb-3">
             <label for="image" class="form-label">Image</label>
             <input type="hidden" name="oldImage" value="{{$member->image}}">
 
             @if($member->image)
-            <img src="{{asset('images/dokter-image/'.$member->image)}}" class="img-preview img-fluid mb-3 col-sm-5 d-block">
+            <img src="{{asset('images/member-image/'.$member->image)}}" class="img-preview img-fluid mb-3 col-sm-5 d-block">
             @else
             <img class="img-preview img-fluid mb-3 col-sm-5">
             @endif
@@ -151,7 +127,29 @@
     </form>
 </div>
 
+<script>
+    const nama = document.querySelector("#nama");
+    const slug = document.querySelector("#slug");
 
+    nama.addEventListener("keyup", function() {
+        let preslug = nama.value;
+        preslug = preslug.replace(/ /g, "-");
+        slug.value = preslug.toLowerCase();
+    });
 
+    function previewImage() {
+        const image = document.querySelector('#image');
+        const imgPreview = document.querySelector('.img-preview');
+
+        imgPreview.style.display = 'block';
+
+        const oFReader = new FileReader();
+        oFReader.readAsDataURL(image.files[0]);
+
+        oFReader.onload = function(oFREvent) {
+            imgPreview.src = oFREvent.target.result;
+        }
+    }
+</script>
 
 @endsection

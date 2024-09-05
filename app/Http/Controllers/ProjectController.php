@@ -4,9 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Models\Project;
 use App\Models\KategoriProject;
-use App\Models\Lamaran;
 use Illuminate\Http\Request;
-use Illuminate\Support\Str;
 use Illuminate\Support\Facades\File;
 
 class ProjectController extends Controller
@@ -15,24 +13,23 @@ class ProjectController extends Controller
     public function index()
     {
         return view('adminView/project', [
-            'tittle' => 'Project',
+            'tittle' => 'Media',
             'project' => Project::latest()->paginate(5)
         ]);
     }
 
-
     public function create()
     {
         return view('adminView/projectCreate', [
-            'tittle' => 'Project',
+            'tittle' => 'Media',
             'kategories' => KategoriProject::all()
-
         ]);
     }
 
+
     public function store(Request $request)
     {
-        $validatedData = $request->validate([
+        $request->validate([
             'title_project' => 'required|max:255',
             'slug' => 'required',
             'keterangan' => 'required',
@@ -40,59 +37,29 @@ class ProjectController extends Controller
             'image' => 'required|image|file|max:5120'
         ]);
 
-        Project::create($validatedData);
+        $imageName = time() . '.' . $request->image->extension();
+        $request->image->move(public_path('images/project-image'), $imageName);
 
-        return redirect('/dashboard/project')->with('pesan', 'Lowongan baru berhasil ditambah');
-    }
-
-
-    public function show(Project $lowongan)
-    {
-        return view('adminView/projectDetail', [
-            'tittle' => 'Project',
-            'data' => $lowongan
-        ]);
-    }
-
-
-    public function edit(Project $lowongan)
-    {
-        return view('adminView/projectEdit', [
-            'tittle' => 'Project',
-            'data' => $lowongan
-        ]);
-    }
-
-
-    public function update(Request $request, Project $lowongan)
-    {
-        $rules = ([
-            'posisi' => 'required|max:255',
-            'persyaratan' => 'required',
-            'excerpt' => 'required',
+        Project::create([
+            'title_project' => $request->title_project,
+            'slug' => $request->slug,
+            'keterangan' => $request->keterangan,
+            'kategori_id' => $request->kategori_id,
+            'image' => $imageName,
         ]);
 
-        if ($request->slug != $lowongan->slug) {
-            $rules['slug'] = 'required|unique:lowongans';
-        }
-
-        $validatedData = $request->validate($rules);
-
-        Project::where('id', $lowongan->id)
-            ->update($validatedData);
-
-        return redirect('/dashboard/project')->with('pesan', 'Lowongan berhasil di Update');
+        return redirect('/dashboard/project')->with('pesan', 'Foto project berhasil ditambah');
     }
 
 
     public function destroy(Project $project)
     {
         if ($project->image) {
-            File::delete(public_path('/images/galeri-image/' . $project->image));
+            File::delete(public_path('/images/project-image/' . $project->image));
         }
 
         Project::destroy($project->id);
 
-        return redirect('/dashboard/galeri')->with('pesan', 'Foto galeri berhasil di hapus');
+        return redirect('/dashboard/project')->with('pesan', 'Foto project berhasil di hapus');
     }
 }

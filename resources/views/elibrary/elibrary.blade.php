@@ -2,7 +2,6 @@
 
 @section('content')
 
-
 <div class="container mt-4">
     <div class="row text-center">
         <div class="col-12">
@@ -48,6 +47,5 @@
         {{$libraries->links()}}
     </div>
 </div>
-
 
 @endsection

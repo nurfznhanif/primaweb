@@ -1,6 +1,7 @@
 @extends('layout.main')
 
 @section('content')
+
 <section id="main-container" class="main-container">
     <div class="container">
         <div class="row">
@@ -28,7 +29,7 @@
 
             <div class="tentang col-lg-6 mt-5 mt-lg-0">
 
-            <iframe width="560" height="315" src="https://www.youtube.com/embed/SSIt7b4hCeo" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" class="yt-tentang" allowfullscreen></iframe>
+                <iframe width="560" height="315" src="https://www.youtube.com/embed/SSIt7b4hCeo" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" class="yt-tentang" allowfullscreen></iframe>
             </div>
 
             <div class="col mt-4">
@@ -43,6 +44,5 @@
 
     </div><!-- Container end -->
 </section><!-- Main container end -->
-
 
 @endsection

@@ -75,43 +75,52 @@ class BlogController extends Controller
     }
 
     public function update(Request $request, Blog $blog)
-    {
-        $rules = [
-            'title' => 'required|max:255',
-            'category_id' => 'required',
-            'image' => 'image|file|max:5120',
-            'body' => 'required',
-        ];
+{
+    // Aturan validasi
+    $rules = [
+        'title' => 'required|max:255',
+        'category_id' => 'required',
+        'image' => 'image|file|max:5120',
+        'body' => 'required',
+    ];
 
-        if ($request->slug != $blog->slug) {
-            $rules['slug'] = 'required|unique:blogs';
-        }
-
-        $request->validate($rules);
-
-        if ($request->file('image')) {
-            if ($request->oldImage) {
-                File::delete(public_path('/images/blog-image/' . $blog->image));
-            }
-            $rules['image'] =
-                $imageName = time() . '.' . $request->image->extension();
-            $request->image->move(public_path('images/blog-image'), $imageName);
-        }
-
-        Blog::where('id', $blog->id)
-            ->update([
-                'title' => $request->title,
-                'slug' => $request->slug,
-                'category_id' => $request->category_id,
-                'body' => $request->body,
-                'user_id' => auth()->user()->id,
-                'excerpt' => Str::limit(Strip_tags($request->body), 200),
-                'image' => $imageName,
-            ]);
-
-        return redirect('/blog')->with('pesan', 'Post berhasil di Update');
+    // Tambahkan aturan unik untuk slug jika ada perubahan
+    if ($request->slug != $blog->slug) {
+        $rules['slug'] = 'required|unique:blogs';
     }
 
+    // Validasi data
+    $validatedData = $request->validate($rules);
+
+    // Variabel untuk menyimpan nama gambar
+    $imageName = $blog->image; // Gunakan gambar lama jika tidak ada gambar baru
+
+    // Jika ada file gambar baru yang diunggah
+    if ($request->hasFile('image')) {
+        // Hapus gambar lama jika ada
+        if ($blog->image) {
+            File::delete(public_path('images/blog-image/' . $blog->image));
+        }
+
+        // Simpan gambar baru
+        $imageName = time() . '.' . $request->image->extension();
+        $request->image->move(public_path('images/blog-image'), $imageName);
+    }
+
+    // Perbarui blog dengan data yang telah divalidasi
+    Blog::where('id', $blog->id)
+        ->update([
+            'title' => $request->title,
+            'slug' => $request->slug,
+            'category_id' => $request->category_id,
+            'body' => $request->body,
+            'user_id' => auth()->user()->id,
+            'excerpt' => Str::limit(strip_tags($request->body), 200),
+            'image' => $imageName,
+        ]);
+
+    return redirect('/blog')->with('pesan', 'Post berhasil diupdate');
+}
 
     public function destroy(Blog $blog)
     {

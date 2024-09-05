@@ -108,7 +108,7 @@
             </li>
 
             <li class="nav-item">
-                <a class="nav-link {{ ($tittle === "Dokter") ? '' : 'collapsed'}}" href="/dashboard/dokter">
+                <a class="nav-link {{ ($tittle === "Member") ? '' : 'collapsed'}}" href="/dashboard/member">
                     <i class="bi bi-people-fill"></i>
                     <span>Kelola Member</span>
                 </a>
@@ -126,11 +126,6 @@
                     <i class="bi bi-journal-text"></i><span>Media</span><i class="bi bi-chevron-down ms-auto"></i>
                 </a>
                 <ul id="forms-nav1" class="nav-content collapse " data-bs-parent="#sidebar-nav">
-                    <li>
-                        <a href="/dashboard/banner">
-                            <i class="bi bi-circle"></i><span>Kelola Banner</span>
-                        </a>
-                    </li>
                     <li>
                         <a href="/dashboard/yt">
                             <i class="bi bi-circle"></i><span>YouTube Link Videos</span>
@@ -153,29 +148,6 @@
                     </li>
                 </ul>
             </li>
-            <li class="nav-item">
-                <a class="nav-link collapsed" data-bs-target="#forms-nav2" data-bs-toggle="collapse" href="#">
-                    <i class="bi bi-house-fill"></i><span>Layanan</span><i class="bi bi-chevron-down ms-auto"></i>
-                </a>
-                <ul id="forms-nav2" class="nav-content collapse " data-bs-parent="#sidebar-nav">
-                    <li>
-                        <a href="/dashboard/layanan-poliklinik">
-                            <i class="bi bi-circle"></i><span>Layanan Poliklinik</span>
-                        </a>
-                    </li>
-                    <li>
-                        <a href="/dashboard/fasilitas-layanan">
-                            <i class="bi bi-circle"></i><span>Fasilitas Layanan</span>
-                        </a>
-                    </li>
-                </ul>
-            </li>
-            <!-- <li class="nav-item">
-                <a class="nav-link {{ ($tittle === "Layanan") ? '' : 'collapsed'}}" href="/dashboard/layanan">
-                    <i class="bi bi-house-fill"></i>
-                    <span>Kelola layanan</span>
-                </a>
-            </li> -->
             <li class="nav-item">
                 <a class="nav-link {{ ($tittle === "Lowongan") ? '' : 'collapsed'}}" href="/dashboard/project">
                     <i class="bi bi-archive-fill"></i>
@@ -202,10 +174,10 @@
     <!-- ======= Footer ======= -->
     <footer id="footer" class="footer">
         <div class="copyright">
-            &copy; Copyright <strong><span>RislanJAGO</span></strong>. All Rights Reserved
+            &copy; Copyright <strong><span>PRIMAWEB</span></strong>. All Rights Reserved
         </div>
         <div class="credits">
-            Designed by <a href="https://bootstrapmade.com/">RislanJAGO</a>
+            Designed by <a href="https://bootstrapmade.com/">PRIMATECH</a>
         </div>
     </footer><!-- End Footer -->
 

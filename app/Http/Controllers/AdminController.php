@@ -13,7 +13,6 @@ class AdminController extends Controller
     {
         return view('adminView/dashboard', [
             'tittle' => 'Dashboard',
-            'data' => Banner::all(),
             'posts' => Blog::latest()->filter(request(['search', 'category']))->paginate(3)->withQueryString(),
             'members' => Member::paginate(3)
         ]);

@@ -3,21 +3,12 @@
 namespace Database\Seeders;
 
 // use Illuminate\Database\Console\Seeds\WithoutModelEvents;
-use App\Models\Blog;
 use App\Models\User;
-use App\Models\Member;
 use App\Models\Folder;
-use App\Models\Galeri;
-use App\Models\Elibrary;
-use App\Models\JadwalMember;
-use App\Models\LayananImage;
 use App\Models\PostCategory;
 use Illuminate\Database\Seeder;
-use App\Models\Fasilitas_Layanan;
 use App\Models\KategoriGaleri;
 use App\Models\KategoriProject;
-use App\Models\Layanan_poliklinik;
-use App\Models\Partnership;
 use App\Models\YtLink;
 
 class DatabaseSeeder extends Seeder
@@ -44,51 +35,17 @@ class DatabaseSeeder extends Seeder
             'password' => bcrypt('admin')
         ]);
 
-        Member::create([
-            'nama' => 'Budi',
-            'slug' => 'budi',
-            'poliklinik_id' => '1',
-            'jenis_kelamin' => 'Laki-laki',
-            'tanggal_lahir' => '1988-07-19',
-            'alamat_domisili' => 'Kartama',
-            'no_hp' => '123456',
-            'email' => 'budi@gmail.com',
-            'riwayat' => 'Budi adalah seorang dokter'
-        ]);
-
-        Layanan_poliklinik::create([
-            'poliklinik' => 'Spesialis Bedah Anak',
-            'slug' => 'spesialis-bedah-anak',
-            'ket' => '<div>ini poliklinik spesialis bedah anak</div>',
-        ]);
-        Layanan_poliklinik::create([
-            'poliklinik' => 'Spesialis Urologi',
-            'slug' => 'spesialis-urologi',
-            'ket' => '<div>ini poliklinik spesialis urologi</div>',
-        ]);
-
-
         // folder
-        Folder::create([
-            'nama_folder' => 'Tips kesehatan'
-        ]);
         Folder::create([
             'nama_folder' => 'Buku Pembelajaran'
         ]);
 
-
         // gallery Categories
         KategoriGaleri::create([
-            'galeri_kategori' => 'Pelatihan BTCLS',
+            'galeri_kategori' => 'Workshop',
         ]);
         KategoriGaleri::create([
-            'galeri_kategori' => 'Penanggulangan Covid-19',
-        ]);
-        KategoriGaleri::create([
-            'galeri_kategori' => 'Vaksin Booster',
-        ]);
-        KategoriGaleri::create([
-            'galeri_kategori' => 'Pengabdian Masyarakat',
+            'galeri_kategori' => 'Webinar',
         ]);
 
         // Project Categories
@@ -101,12 +58,12 @@ class DatabaseSeeder extends Seeder
 
         // kategori post
         PostCategory::create([
-            'kategori' => 'Info kesehatan',
-            'slug' => 'info-kesehatan'
+            'kategori' => 'Info Teknologi',
+            'slug' => 'info-teknologi'
         ]);
         PostCategory::create([
-            'kategori' => 'Tips kesehatan',
-            'slug' => 'tips-kesehatan'
+            'kategori' => 'Tips Teknologi',
+            'slug' => 'tips-teknologi'
         ]);
         PostCategory::create([
             'kategori' => 'Hot News',

@@ -18,7 +18,7 @@
 
     <!-- Favicon
 ================================================== -->
-<link href="assets/img/fav-icon.png" rel="website icon">
+    <link href="assets/img/fav-icon.png" rel="website icon">
 
     <!-- CSS
 ================================================== -->
@@ -85,8 +85,9 @@
                                             <li><a class="dr" href="/partnership">Our Partners</a></li>
                                         </ul>
                                     </li>
-                                    <li class="nav-item"><a class="nav-link nb"
-                                            href="https://tiny.cc/G-WORK-WEB">Workshop</a></li>
+
+                                    <li class="nav-item"><a class="nav-link nb" href="/e-library">Library</a></li>
+
                                 </ul>
                             </div>
                         </nav>
@@ -102,29 +103,6 @@
         <!--/ Header end -->
 
         @yield('content')
-
-
-        <!-- floating wa -->
-
-        <div class="floating-container" id="tooltip">
-            <img src="{{ asset('Template') }}/images/icon-customer.png" class="floating-button text-dark">
-            <div class="element-container">
-
-                <span class="float-element tooltip-left" id="tooltip-linktree">
-                    <a href="#"><i class="fas fa-link"></i></a>
-                    <span id="tooltipText-linktree">Linktree</span>
-                </span>
-                <span class="float-element" id="tooltip-pendaftaran">
-                    <a href="#"><i class="fab fa-whatsapp"></i></a>
-                    <span id="tooltipText-pendaftaran">Pendaftran Online</span>
-                </span>
-                <span class="float-element" id="tooltip-kritik">
-                    <a href="#"><i class="fab fa-whatsapp"></i></a>
-                    <span id="tooltipText-kritik">Kritik & Saran</span>
-                </span>
-            </div>
-            <span id="tooltipText">Hubungi kami</span>
-        </div>
 
         <footer id="footer" class="footer">
             <div class="footer-main">
@@ -142,18 +120,7 @@
                             <a href="/tentang" class="text-white">Selengkapnya <i class="fas fa-arrow-right"></i></a>
                             <br>
                             <hr>
-                            <p class="text-white">Temukan kami:</p>
-                            <div class="footer-social">
-                                <ul>
-                                    <li><a href="https://www.facebook.com/" aria-label="Facebook"><i
-                                                class="fab fa-facebook-f text-white"></i></a></li>
-                                    <li><a href="https://www.youtube.com/@iqprimatech" aria-label="Youtube"><i
-                                                class="fab fa-youtube text-white"></i></a>
-                                    </li>
-                                    <li><a href="https://www.instagram.com/iq.primatech/" aria-label="Instagram"><i
-                                                class="fab fa-instagram text-white"></i></a></li>
-                                </ul>
-                            </div><!-- Footer social end -->
+
                         </div><!-- Col end -->
 
                         <div class="col-lg-4 col-md-6 footer-widget mt-5 mt-md-0 forum">
@@ -165,16 +132,20 @@
                         </div><!-- Col end -->
 
                         <div class="col-lg-3 col-md-6 mt-5 mt-lg-0 footer-widget project">
-                            <h3 class="widget-title">Project</h3>
-                            <ul class="list-arrow">
-                                @foreach ($lyn as $lyns)
-                                    <li><a href="/services/detail/{{ $lyns->slug }}"
-                                            class="text-white">{{ $lyns->poliklinik }} </a></li>
-                                @endforeach
-                                <li><a href="/services" class="text-white">Selengkapnya <i
-                                            class="fas fa-arrow-right"></i></a></li>
-                            </ul>
-                        </div><!-- Col end -->
+                            <p class="text-white">Temukan kami:</p>
+                            <div class="footer-social">
+                                <ul>
+                                    <li><a href="https://www.facebook.com/" aria-label="Facebook"><i
+                                                class="fab fa-facebook-f text-white"></i></a></li>
+                                    <li><a href="https://www.youtube.com/@iqprimatech" aria-label="Youtube"><i
+                                                class="fab fa-youtube text-white"></i></a>
+                                    </li>
+                                    <li><a href="https://www.instagram.com/iq.primatech/" aria-label="Instagram"><i
+                                                class="fab fa-instagram text-white"></i></a></li>
+                                </ul>
+                            </div>
+                        </div>
+                        <!-- Col end -->
                     </div><!-- Row end -->
                 </div><!-- Container end -->
             </div><!-- Footer main end -->
@@ -193,24 +164,9 @@
                         </div>
                     </div><!-- Row end -->
 
-                    <!-- <div id="back-to-top" data-spy="affix" data-offset-top="10" class="back-to-top position-fixed">
-                        <button class="btn btn-primary" title="Back to Top">
-                            <i class="fa fa-angle-double-up"></i>
-                        </button>
-                    </div> -->
-
                 </div><!-- Container end -->
             </div><!-- Copyright end -->
         </footer><!-- Footer end -->
-
-
-        <!-- Javascript Files
-  ================================================== -->
-        <!-- <script type="text/javascript">
-            window.onload = () => {
-                $('#onload').modal('show');
-            }
-        </script> -->
 
         <!-- initialize jQuery Library -->
         <script src="{{ asset('Template') }}/plugins/jQuery/jquery.min.js"></script>

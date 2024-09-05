@@ -36,7 +36,6 @@
                             <select name="role" class="form-select">
                                 <option value="1" @if (old('role')=='1' ) selected="selected" @endif>Adminstrator</option>
                                 <option value="2" @if (old('role')=='2' ) selected="selected" @endif>Social Media Admin</option>
-                                <option value="3" @if (old('role')=='3' ) selected="selected" @endif>Recruiter</option>
                             </select>
                             @error('role')
                             <div class="invalid-feedback">

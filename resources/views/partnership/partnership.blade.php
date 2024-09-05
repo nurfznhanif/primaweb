@@ -16,7 +16,8 @@
                     @foreach($partnership as $partner)
                     <div class="col-sm-2 col-6">
                         <figure class="clients-logo">
-                            <a href="#"><img loading="lazy" class="img-fluid" src="{{asset('storage/'.$partner->image)}}" alt="clients-logo" title="{{$partner->nama_partner}}" /></a>
+                            <a href="#"><img src="{{ asset('images/partner-image/' . $partner->image) }}"
+                                    class="img-fluid" width="100" title="{{ $partner->nama_partner }}"></a>
                         </figure>
                     </div>
                     @endforeach

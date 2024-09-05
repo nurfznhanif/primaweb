@@ -7,13 +7,13 @@
     <nav>
         <ol class="breadcrumb">
             <li class="breadcrumb-item"><a href="/admin">Dashboard</a></li>
-            <li class="breadcrumb-item"><a href="/dashboard/dokter">Data Member</a></li>
+            <li class="breadcrumb-item"><a href="/dashboard/member">Data Member</a></li>
             <li class="breadcrumb-item active">Tambah data</li>
         </ol>
     </nav>
 </div>
 <div class="col-lg-8">
-    <form method="POST" action="/dashboard/dokter" enctype="multipart/form-data">
+    <form method="POST" action="/dashboard/member" enctype="multipart/form-data">
         @csrf
         <div class="mb-3">
             <label for="nama" class="form-label">Nama Member</label>
@@ -84,29 +84,14 @@
             @enderror
         </div>
 
-        <div class="row">
-            <div class="mb-3 col-md-6">
-                <label for="poliklinik" class="form-label">Poliklinik</label>
-                <select name="poliklinik_id" class="form-select">
-                    @foreach ($poliklinik as $poli)
-                    @if(old('poliklinik_id') == $poli->id)
-                    <option value="{{$poli->id}}" selected>{{ $poli->poliklinik }}</option>
-                    @else
-                    <option value="{{$poli->id}}">{{ $poli->poliklinik }}</option>
-                    @endif
-                    @endforeach
-                </select>
+        <div class="mb-3">
+            <label for="posisi" class="form-label">Posisi</label>
+            <input type="text" class="form-control @error('posisi') is-invalid @enderror" name="posisi" id="posisi" value="{{old('posisi')}}" autofocus>
+            @error('posisi')
+            <div class="invalid-feedback">
+                {{ $message }}
             </div>
-
-            <div class="mb-3 col-md-6">
-                <label for="specialis" class="form-label">Sub Specialist</label>
-                <input type="specialis" class="form-control @error('specialis') is-invalid @enderror" name="specialis" id="specialis" value="{{old('specialis')}}" autofocus>
-                @error('specialis')
-                <div class="invalid-feedback">
-                    {{ $message }}
-                </div>
-                @enderror
-            </div>
+            @enderror
         </div>
 
         <div class="mb-3">

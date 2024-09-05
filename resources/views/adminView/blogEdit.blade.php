@@ -8,7 +8,7 @@
         <ol class="breadcrumb">
             <li class="breadcrumb-item"><a href="/admin">Dashboard</a></li>
             <li class="breadcrumb-item">Media</li>
-            <li class="breadcrumb-item"><a href="/blog">RSGH Blog</a></li>
+            <li class="breadcrumb-item"><a href="/blog">PRIMA Blog</a></li>
             <li class="breadcrumb-item active">Edit Post</li>
         </ol>
     </nav>
@@ -75,8 +75,5 @@
         <button type="submit" class="btn btn-primary">Update Post</button>
     </form>
 </div>
-
-
-
 
 @endsection
