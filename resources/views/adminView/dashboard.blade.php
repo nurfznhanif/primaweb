@@ -1,20 +1,19 @@
 @extends('layout.mainAdmin')
 
 @section('content')
-<div class="container">
+<div class="container dashboard">
     <div class="pagetitle">
         <h1>Dashboard</h1>
     </div>
 
     <!-- Postingan saat ini -->
     <div class="col-md-6">
-        <h5 class="widget-title">Temukan Artikel</h5>
-        <form action="/dashboard/blog">
+        <form action="/dashboard/blog" class="form-group">
             <div class="input-group mb-3">
-                <input type="text" class="form-control" placeholder="Search.." name="search"
+                <input type="text" class="form-control" placeholder="Temukan Artikel..." name="search"
                     value="{{ request('search') }}" autofocus>
-                <button class="btn btn-primary" type="submit">Search</button>
             </div>
+            <button class="btn btn-primary form-btn" type="submit">Search</button>
         </form>
     </div>
     <div class="col mb-3">
@@ -26,7 +25,7 @@
         <div class="row">
             <div class="col">
                 <div class="card">
-                    <div class="card-body">
+                    <div class="card-body-db">
                         <h5 class="card-title">Postingan Terbaru</h5>
                         <div class="table-responsive">
                             <table class="table table-bordered">

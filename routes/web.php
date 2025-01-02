@@ -27,7 +27,7 @@ Route::get('/artikel', [BlogGuestController::class, 'index']);
 Route::get('/artikel/{blog}', [BlogGuestController::class, 'show']);
 
 // member guest
-Route::get('/member/profil', [MainController::class, 'profilMember']);
+Route::get('/member/profilMember', [MainController::class, 'profilMember']);
 Route::get('/member/profil/{member}', [MainController::class, 'profilMemberDetail']);
 
 // elibrary

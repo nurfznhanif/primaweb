@@ -29,7 +29,7 @@
             <div class="latest-post">
                 <div class="latest-post-media">
                     <a href="#" class="latest-post-img">
-                        <img loading="lazy" class="img-fluid" src="{{asset('Template')}}/Images/document.png" alt="img" width="100">
+                        <img loading="lazy" class="img-fluid" src="{{asset('Template')}}/Images/fav-icon.jpg" alt="img" width="100">
                     </a>
                 </div>
                 <div class="post-body">

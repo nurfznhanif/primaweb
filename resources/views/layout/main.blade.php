@@ -54,7 +54,7 @@
                         <nav class="navbar navbar-fixed-top navbar-expand-lg navbar-light p-0">
 
                             <div class="logo">
-                                <a class="d-block" href="/">
+                                <a class="d-block ml-4" href="/">
                                     <img loading="lazy" src="assets/img/primatechwhite.png" alt="PRIMATECH">
                                 </a>
                             </div><!-- logo end -->
@@ -79,14 +79,14 @@
                                             data-toggle="dropdown">Informasi
                                             <i class="fa fa-angle-down"></i></a>
                                         <ul class="dropdown-menu" role="menu">
-                                            <li><a class="dr" href="/member/profil">Members</a></li>
+                                            <li><a class="dr" href="/member/profilMember">Members</a></li>
                                             <li><a class="dr" href="/galeri">Galeri</a></li>
                                             <li><a class="dr" href="/project">Project</a></li>
                                             <li><a class="dr" href="/partnership">Our Partners</a></li>
                                         </ul>
                                     </li>
 
-                                    <li class="nav-item"><a class="nav-link nb" href="/e-library">Library</a></li>
+                                    <li class="nav-item"><a class="nav-link nb mr-4" href="/e-library">Library</a></li>
 
                                 </ul>
                             </div>
@@ -120,7 +120,6 @@
                             <a href="/tentang" class="text-white">Selengkapnya <i class="fas fa-arrow-right"></i></a>
                             <br>
                             <hr>
-
                         </div><!-- Col end -->
 
                         <div class="col-lg-4 col-md-6 footer-widget mt-5 mt-md-0 forum">

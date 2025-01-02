@@ -37,17 +37,17 @@
     </style>
 </head>
 
-<body>
+<body class="admin-body">
 
     <!-- ======= Header ======= -->
     <header id="header" class="header fixed-top d-flex align-items-center">
 
-        <div class="d-flex align-items-center justify-content-between">
-            <a href="#" class="logo d-flex align-items-center">
+        <div class="d-flex align-items-center justify-content-between mr-4">
+            <i class="bi bi-list toggle-sidebar-btn"></i>
+            <a href="#" class="logo d-flex align-items-center ml-4">
                 <img src="assets/img/logo.png" alt="">
                 <span class="d-none d-lg-block">IQ Primatech</span>
             </a>
-            <i class="bi bi-list toggle-sidebar-btn"></i>
         </div>
 
 
@@ -56,13 +56,14 @@
                 <li class="nav-item dropdown pe-3">
 
                     <a class="nav-link nav-profile d-flex align-items-center pe-0" href="#" data-bs-toggle="dropdown">
-                        <img src="{{asset('images/user-image/'. auth()->user()->image)}}" alt="Profile" class="rounded-circle">
-                        <span class="d-none d-md-block dropdown-toggle ps-2">{{auth()->user()->nama}}</span>
+                        <img src="assets/img/fav-icon.png" alt="Profile" class="rounded-circle">
+                        <span class="d-none d-md-block dropdown-toggle ps-2">PRIMATECH</span>
                     </a>
 
                     <ul class="dropdown-menu dropdown-menu-end dropdown-menu-arrow profile">
                         <li class="dropdown-header">
-                            <h6>{{auth()->user()->nama}}</h6>
+                            <img src="assets/img/fav-icon.png" alt="Profile" class="rounded-circle">
+                            <h6>Primatech</h6>
                             @if(auth()->user()->role == '1')
                             <span>Adminstrator</span>
                             @elseif(auth()->user()->role == '2')
@@ -174,10 +175,7 @@
     <!-- ======= Footer ======= -->
     <footer id="footer" class="footer">
         <div class="copyright">
-            &copy; Copyright <strong><span>PRIMAWEB</span></strong>. All Rights Reserved
-        </div>
-        <div class="credits">
-            Designed by <a href="https://bootstrapmade.com/">PRIMATECH</a>
+            &copy; Copyright <strong><span>PRIMATECH</span></strong>. All Rights Reserved
         </div>
     </footer><!-- End Footer -->
 

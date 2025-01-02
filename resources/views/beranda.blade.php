@@ -22,7 +22,7 @@ $bg = asset('Template');
                     <use xlink:href="#gentle-wave" x="48" y="0" fill="rgba(255,255,255,0.7)" />
                     <use xlink:href="#gentle-wave" x="48" y="3" fill="rgba(255,255,255,0.5)" />
                     <use xlink:href="#gentle-wave" x="48" y="5" fill="rgba(255,255,255,0.3)" />
-                    <use xlink:href="#gentle-wave" x="48" y="7" fill="#fff" />
+                    <use xlink:href="#gentle-wave" x="48" y="7" fill="whitesmoke" />
                 </g>
             </svg>
         </div>
@@ -77,14 +77,14 @@ $bg = asset('Template');
     <div class="container">
         <div class="action-style-box">
             <div class="row mt">
-                <div class="col-md-8 text-center text-md-left">
+                <div class="col-md-8 text-center text-md-left mb-4">
                     <div class="call-to-action-text">
                         <h3 class="action-title">Support Each Other</h3>
                     </div>
                 </div><!-- Col end -->
-                <div class="col-md-4 text-center text-md-right mt-3 mt-md-0">
+                <div class="col-md-4 text-center text-md-right mt-3">
                     <div class="call-to-action-btn">
-                        <a class="btn btn-light rounded" href="/tentang">Tentang Kami</a>
+                        <a class="btn btn-light rounded text-dark" href="/tentang">Tentang Kami</a>
                     </div>
                 </div><!-- col end -->
             </div><!-- row end -->
@@ -107,11 +107,11 @@ $bg = asset('Template');
                     title="YouTube video" frameborder="0" allow="autoplay" allowfullscreen></iframe>
             </div>
         </div>
-        <div class="col-md-6">
+        <div class="col-md-6 yt">
             <div class="card mb-3" style="max-width: 960px;">
                 <div class="row mt g-0">
                     <div class="img-social col-md-4">
-                        <img src="{{ asset('images/PRIMATECH/IMG_6754.JPG') }}"
+                        <img src="{{ asset('images/PRIMATECH/prima-yt.png') }}"
                             class="img-fluid rounded-start mx-2 my-2">
                     </div>
                     <div class="col-md-8">
@@ -122,13 +122,13 @@ $bg = asset('Template');
                                 Kec. Bukit Raya,
                                 Kota Pekanbaru,
                                 Riau 28284</p>
-                            <div class="g-ytsubscribe" data-channelid="UCyM6kQmbMWqKK3QTDMHeoZw"
+                            <div class="g-ytsubscribe" data-channelid="UCr5SS9AOypiu49SVxM7GYHg"
                                 data-layout="default" data-count="default"></div>
                         </div>
                     </div>
                 </div>
             </div>
-            <a href="https://www.youtube.com/@iqprimatech/featured" class="btn btn-dark btn-more">More Video</a>
+            <a href="https://www.youtube.com/@iq.primatech/featured" class="btn btn-dark btn-more">More Video</a>
         </div>
         @endforeach
     </div>
@@ -143,16 +143,27 @@ $bg = asset('Template');
                 <h3 class="judulvm">Partner kami</h3>
             </div>
         </div>
-        <div class="row mt all-clients">
-            @foreach ($partnership as $partner)
-            <div class="col-sm-2 col-6">
-                <figure class="clients-logo">
-                    <a href="#"><img loading="lazy" class="img-fluid"
-                            src="{{ asset('images/partner-image/' . $partner->image) }}"
-                            alt="{{ $partner->nama_partner }}" title="{{ $partner->nama_partner }}" /></a>
-                </figure>
+        <div class="logos">
+            <div class="logo_items">
+                    <img src="images/PRIMATECH/orang-siber.png">
+                    <img src="images/PRIMATECH/aklamasi.png">
+                    <img src="images/PRIMATECH/orang-siber.png">
+                    <img src="images/PRIMATECH/aklamasi.png">
+                    <img src="images/PRIMATECH/orang-siber.png">
+                    <img src="images/PRIMATECH/aklamasi.png">
+                    <img src="images/PRIMATECH/orang-siber.png">
+                    <img src="images/PRIMATECH/aklamasi.png">
             </div>
-            @endforeach
+                <div class="logo_items">
+                    <img src="images/PRIMATECH/orang-siber.png">
+                    <img src="images/PRIMATECH/aklamasi.png">
+                    <img src="images/PRIMATECH/orang-siber.png">
+                    <img src="images/PRIMATECH/aklamasi.png">
+                    <img src="images/PRIMATECH/orang-siber.png">
+                    <img src="images/PRIMATECH/aklamasi.png">
+                    <img src="images/PRIMATECH/orang-siber.png">
+                    <img src="images/PRIMATECH/aklamasi.png">
+                </div>
         </div>
 
         <div class="col-12">
@@ -162,6 +173,7 @@ $bg = asset('Template');
         </div>
     </div>
     <!--/ Container end -->
-</section><!-- Content end -->
+</section>
+<!-- Content end -->
 
 @endsection

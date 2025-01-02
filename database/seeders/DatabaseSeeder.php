@@ -18,21 +18,12 @@ class DatabaseSeeder extends Seeder
     {
         // Dev User
         User::create([
-            'nama' => 'Cha Eun Woo',
+            'nama' => 'Nurfauzan Hanif',
             'role' => '1',
-            'email' => 'mahkotonagano@gmail.com',
-            'username' => 'kusuka',
-            'image' => '1676100893.jpg',
-            'password' => bcrypt('123456')
-        ]);
-
-        User::create([
-            'nama' => 'Tri Rislan Febrika',
-            'role' => '1',
-            'email' => 'admin@gov.id',
-            'username' => 'rislan',
+            'email' => 'nrfznhnf@gmail.com',
+            'username' => 'nrfznhnf',
             'image' => '',
-            'password' => bcrypt('admin')
+            'password' => bcrypt('12345678')
         ]);
 
         // folder
@@ -72,7 +63,7 @@ class DatabaseSeeder extends Seeder
 
         YtLink::create([
             'title' => 'GIT & GITHUB',
-            'embed_link' => 'https://www.youtube.com/embed/CYlu6yoUsLI',
+            'embed_link' => 'https://www.youtube.com/embed/F9N-W1rhTuY?si=8J67paSKXo1bTOEX',
         ]);
     }
 }

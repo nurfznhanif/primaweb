@@ -63,7 +63,7 @@ h6 {
   font-size: 24px;
   margin-bottom: 0;
   font-weight: 600;
-  color: #012970;
+  color: #23282d;
 }
 
 /*--------------------------------------------------------------
@@ -194,6 +194,48 @@ h6 {
   0% {
     opacity: 0;
   }
+}
+
+.admin-body {
+  background-color: whitesmoke;
+}
+
+.dashboard .btn {
+  background-color: #23282d;
+  border-radius: 10px;
+  border: none;
+}
+
+.container-dashboard.form-control {
+  border: #23282d;
+}
+
+.form-group {
+  display: flex;
+}
+
+.form-group button {
+  height: 38px;
+  margin-left: 5px;
+}
+
+.card-body-db {
+  background-color: whitesmoke;
+  border-radius: 10px;
+}
+
+.card-body-db h5 {
+  color: #23282d;
+  margin-left: 10px;
+}
+
+.card-body-db table {
+  color: whitesmoke;
+  background-color: #23282d;
+  width: 98%;
+  margin-left: 10px;
+  border: whitesmoke;
+  border-radius: 10px;
 }
 
 /* Light Backgrounds */
@@ -594,10 +636,16 @@ h6 {
   font-size: 14px;
 }
 
+.dropdown-header img {
+  height: 50px;
+}
+
 .header-nav .profile .dropdown-item {
   font-size: 14px;
   padding: 10px 15px;
   transition: 0.3s;
+  background-color: brown;
+  color: whitesmoke;
 }
 
 .header-nav .profile .dropdown-item i {
@@ -608,6 +656,7 @@ h6 {
 
 .header-nav .profile .dropdown-item:hover {
   background-color: #f6f9ff;
+  color: #23282d;
 }
 
 /*--------------------------------------------------------------

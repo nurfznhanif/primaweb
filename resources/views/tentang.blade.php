@@ -28,8 +28,7 @@
             </div>
 
             <div class="tentang col-lg-6 mt-5 mt-lg-0">
-
-                <iframe width="560" height="315" src="https://www.youtube.com/embed/SSIt7b4hCeo" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" class="yt-tentang" allowfullscreen></iframe>
+                <iframe width="560" height="315" src="https://www.youtube.com/embed/NG4VbGewRXY?si=j8zm9H4etR9uoIR5" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" class="yt-tentang" allowfullscreen></iframe>
             </div>
 
             <div class="col mt-4">

@@ -22,8 +22,8 @@ FACEBOOK: https://www.facebook.com/themefisher
 /* Typography
 ================================================== */
 body {
-    background: #fff;
-    color: #555;
+    background: whitesmoke;
+    color: #111;
 }
 
 body,
@@ -107,7 +107,7 @@ body {
 
 .preload {
     position: fixed;
-    background: #fff url(../images/preload.gif) center center no-repeat;
+    background: whitesmoke url(../images/preload.gif) center center no-repeat;
     left: 0px;
     top: 0px;
     width: 100%;
@@ -538,11 +538,12 @@ a[href^="tel"] {
 }
 
 .btn-primary {
-    background: #303b97;
+    background: #23282d;
 }
 
 .btn-dark {
     background: #23282d;
+    border-radius: 10px !important;
 }
 
 .btn-primary:hover,
@@ -673,7 +674,7 @@ ul.top-info li p.info-text {
 /* Header area
 ================================================== */
 .header {
-    background: #fff;
+    background: whitesmoke;
     position: relative;
     box-shadow: 0px 3px 3px rgba(0, 0, 0, 0.1);
 }
@@ -714,18 +715,18 @@ ul.top-info li p.info-text {
 }
 
 .header-two {
-    background: #fff;
+    background: whitesmoke;
     box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.15);
     padding: 0px 0;
     z-index: 999;
 }
 
 .header-two .navbar-collapse {
-    background-color: #fff;
+    background-color: whitesmoke;
 }
 
 .header-two .navbar-fixed {
-    background-color: #fff;
+    background-color: whitesmoke;
 }
 
 ul.navbar-nav > li > a {
@@ -1547,6 +1548,8 @@ ul.navbar-nav > li.header-get-a-quote:hover > a:after {
         Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue",
         sans-serif;
     font-weight: bold;
+    border-radius: 10px !important;
+    border: 1px solid white;
 }
 
 /* Intro
@@ -3661,7 +3664,7 @@ label {
     .btn-primary,
     .btn-dark {
         border: 0;
-        border-radius: 3px;
+        border-radius: 10px !important;
         padding: 2px 8px 2px;
         font-weight: 400;
         text-transform: uppercase;
